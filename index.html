@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Long Rods Garage</title>
+  <meta name="description" content="Long Rods Garage — classic cars, custom builds & maintenance." />
+  <style>
+    /* Simple, modern single-file CSS */
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0b1220;
+      --accent:#f59e0b; /* amber */
+      --muted:#9aa4b2;
+      --glass: rgba(255,255,255,0.04);
+      --radius:12px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#071022 0%, #081426 60%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.4;
+    }
+    .container{max-width:1100px;margin:32px auto;padding:24px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{
+      width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ffb84d);display:flex;align-items:center;justify-content:center;color:#072029;font-weight:700;font-size:20px;box-shadow:0 6px 18px rgba(5,10,20,0.6)
+    }
+    h1{margin:0;font-size:1.4rem;letter-spacing:0.6px}
+    nav ul{display:flex;gap:12px;list-style:none;padding:0;margin:0}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px}
+    nav a:hover{color:var(--accent);background:var(--glass)}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:22px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(2,6,12,0.6)}
+
+    .hero h2{margin:0 0 10px 0;font-size:2rem}
+    .lead{color:var(--muted);margin-bottom:18px}
+    .cta{display:inline-block;background:var(--accent);color:#061421;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600}
+
+    .features{display:flex;gap:14px;margin-top:18px}
+    .feature{flex:1;padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);text-align:center}
+    .feature h3{margin:8px 0 0 0;font-size:1rem}
+    .aside-illustration{height:100%;display:flex;align-items:center;justify-content:center}
+
+    section.services{margin-top:28px}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .service{padding:16px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01))}
+    .service p{color:var(--muted);margin:10px 0 0 0}
+
+    footer{margin-top:36px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:0.9rem}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .service-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      header{flex-direction:column;align-items:flex-start}
+      nav ul{flex-wrap:wrap}
+      .service-grid{grid-template-columns:1fr}
+    }
+
+    /* small utility */
+    .muted{color:var(--muted)}
+    .mini{font-size:0.85rem}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">LR</div>
+        <div>
+          <h1>Long Rods Garage</h1>
+          <div class="mini muted">Classic & custom car builds • Maintenance • Fabrication</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card">
+          <h2>We keep long rods running — dependable builds & honest work</h2>
+          <p class="lead">From engine swaps to full chassis fabrication and routine maintenance, Long Rods Garage blends hands-on craftsmanship with modern diagnostics. Located locally — built to last.</p>
+          <a class="cta" href="#contact">Book a consultation</a>
+
+          <div class="features" aria-hidden>
+            <div class="feature">
+              <strong>Fabrication</strong>
+              <h3 class="mini muted">Bespoke brackets, mounts & cages</h3>
+            </div>
+            <div class="feature">
+              <strong>Engine Work</strong>
+              <h3 class="mini muted">Swaps, rebuilds & tuning</h3>
+            </div>
+            <div class="feature">
+              <strong>Maintenance</strong>
+              <h3 class="mini muted">Service, inspection & safety checks</h3>
+            </div>
+          </div>
+        </div>
+
+        <aside class="aside-illustration card">
+          <!-- simple SVG car illustration placeholder -->
+          <svg width="320" height="180" viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="stylized car illustration">
+            <rect width="320" height="180" rx="10" fill="rgba(255,255,255,0.02)"/>
+            <path d="M18 110 H302 L272 70 H48 Z" fill="rgba(245,158,11,0.12)" />
+            <circle cx="90" cy="125" r="18" fill="rgba(255,255,255,0.06)" />
+            <circle cx="230" cy="125" r="18" fill="rgba(255,255,255,0.06)" />
+            <rect x="60" y="70" width="200" height="24" rx="6" fill="rgba(255,255,255,0.03)" />
+          </svg>
+        </aside>
+      </section>
+
+      <section id="services" class="services">
+        <h2 class="mini">Our services</h2>
+        <div class="service-grid">
+          <div class="service card">
+            <h3>Custom Fabrication</h3>
+            <p>Tube bending, welding, mounts and roll cages built to your specs.</p>
+          </div>
+          <div class="service card">
+            <h3>Engine & Drivetrain</h3>
+            <p>Rebuilds, swaps, clutch/flywheel work, and dyno tuning (partnered).</p>
+          </div>
+          <div class="service card">
+            <h3>Routine Maintenance</h3>
+            <p>Oil, brakes, suspension, alignments — keep your car safe and fast.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" style="margin-top:22px">
+        <h2 class="mini">Gallery (placeholder)</h2>
+        <div class="card" style="padding:12px;margin-top:10px">
+          <p class="muted">Add photos of your projects here — thumbnails, before/after shots, and build notes.</p>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:22px">
+        <h2 class="mini">Contact</h2>
+        <div class="card" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+          <div style="flex:1;min-width:220px">
+            <p class="muted">Email: <strong>hello@longrods.example</strong></p>
+            <p class="muted">Phone: <strong>(555) 555-0123</strong></p>
+            <p class="muted">Address: <strong>123 Rod St, Motor City</strong></p>
+          </div>
+          <form style="min-width:260px;flex:1" onsubmit="event.preventDefault();alert('Thanks — form disabled in demo');">
+            <label class="mini muted">Name</label><br>
+            <input required style="width:100%;padding:10px;margin:6px 0;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" placeholder="Your name">
+            <label class="mini muted">Message</label><br>
+            <textarea required style="width:100%;padding:10px;margin:6px 0;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" placeholder="Tell us about your project" rows="3"></textarea>
+            <button type="submit" class="cta" style="margin-top:6px">Send</button>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Long Rods Garage</div>
+      <div class="muted">Built with care • <span class="mini">Simple single-file demo</span></div>
+    </footer>
+  </div>
+
+  <script>
+    // small niceties
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
