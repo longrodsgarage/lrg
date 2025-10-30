@@ -165,52 +165,25 @@
     <h2>Get in Touch</h2>
     <p>Have questions, want to collaborate, or just want to chat about cars? Fill out the form below or reach out to us on YouTube!</p>
 
-    <!-- Contact Form -->
-<form id="https://formspree.io/f/xkgpzwea">
-  <label for="name">Name</label>
-  <input type="text" name="name" id="name" placeholder="Your Name" required>
-
-  <label for="email">Email</label>
-  <input type="email" name="email" id="email" placeholder="Your Email" required>
-
-  <label for="message">Message</label>
-  <textarea name="message" id="message" placeholder="Your Message" required></textarea>
-
+<form
+  action="https://formspree.io/f/xkgpzwea"
+  method="POST"
+>
+  <label>
+    Your name:
+    <input type="text" name="name">
+  </label>
+  <lable>
+    Your Email:
+      <input type="email" name="email">
+  </lable>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
   <button type="submit">Send</button>
 </form>
-
-<script>
-  const form = document.getElementById('contactForm');
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault(); // prevent default form submission
-
-    // Gather form data
-    const formData = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value
-    };
-
-    try {
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-
-      if (response.ok) {
-        alert('Message sent successfully!');
-        form.reset();
-      } else {
-        alert('Failed to send message. Please try again.');
-      }
-    } catch (error) {
-      alert('An error occurred. Please try again.');
-      console.error(error);
-    }
-  });
-</script>
 
 
   <footer>
@@ -220,5 +193,6 @@
   </footer>
 </body>
 </html>
+
 
 
