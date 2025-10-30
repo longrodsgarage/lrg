@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Long Rods Garage - Contact</title>
+  <style>
+    :root {
+      --accent: #00ff80;
+      --dark: #0a0a0a;
+      --text: #fff;
+      --accent-glow: 0 0 15px #00ff80;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--carbon-dark);
+      color: var(--text-light);
+      background-image:
+        repeating-linear-gradient(45deg, #111 0 10px, #0d0d0d 10px 20px),
+        radial-gradient(circle at 30% 30%, rgba(0,255,128,0.05), transparent 60%);
+      background-attachment: fixed;
+      min-height: 100vh;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.85);
+      text-align: center;
+      padding: 20px;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    header h1 {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      font-size: 2rem;
+      color: var(--accent);
+      letter-spacing: 1px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #ccc;
+      font-family: 'Roboto', sans-serif;
+      margin: 0 15px;
+      text-decoration: none;
+      transition: color 0.3s;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+      text-shadow: var(--accent-glow);
+    }
+
+    main {
+      text-align: center;
+      padding: 60px 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    main h2 {
+      color: var(--accent);
+      font-family: 'Roboto', sans-serif;
+      margin-bottom: 10px;
+    }
+
+    main p {
+      color: #ddd;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 30px;
+      border-radius: 15px;
+      border: 1px solid #222;
+      box-shadow: 0 0 10px rgba(58, 91, 44, 0.4);
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      outline: none;
+      background: #111;
+      color: var(--text);
+      border: 1px solid #333;
+      transition: border 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      border: 1px solid var(--accent);
+    }
+
+    textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    button {
+      background: var(--accent);
+      color: var(--text);
+      border: none;
+      padding: 12px;
+      font-size: 1.1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background: #4b6f39;
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 30px 0;
+      color: #ccc;
+      background: rgba(0, 0, 0, 0.7);
+      font-family: 'Roboto', sans-serif;
+      border-top: 2px solid var(--accent);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Long Rods Garage - Contact</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Get in Touch</h2>
+    <p>Have questions, want to collaborate, or just want to chat about cars? Fill out the form below or reach out to us on YouTube!</p>
+
+    <form action="https://formspree.io/f/xkgpzwea" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Long Rods Garage | Follow us on 
+      <a href="https://www.youtube.com/@LongRodsGarage" target="_blank">YouTube</a>
+    </p>
+  </footer>
+</body>
+</html>
